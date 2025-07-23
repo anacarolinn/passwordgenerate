@@ -224,12 +224,14 @@ class HomePageView extends HomePageViewModel {
                 children: [
                   MyText(
                     text: 'Quantidade de caracteres',
+                    fontSize: 18,
+                    fontWeight: FontWeight.w800,
                   ),
                   MyText(
                     text: sliderValue.toStringAsFixed(0),
                     fontSize: 22,
                     fontWeight: FontWeight.w800,
-                    textColor: AppColors.secondaryColor,
+                    textColor: AppColors.primaryColor,
                   )
                 ],
               ),
@@ -237,7 +239,7 @@ class HomePageView extends HomePageViewModel {
             Slider(
               value: sliderValue,
               min: 6,
-              max: 22,
+              max: 24,
               thumbColor: Colors.white,
               activeColor: AppColors.primaryColor,
               onChanged: (double value) {
@@ -257,7 +259,7 @@ class HomePageView extends HomePageViewModel {
                     textColor: AppColors.subtitleColor,
                   ),
                   MyText(
-                    text: '22',
+                    text: '24',
                     fontSize: 14,
                     textColor: AppColors.subtitleColor,
                   )
@@ -306,7 +308,7 @@ class HomePageView extends HomePageViewModel {
                 text: 'Gerar Senha',
                 textColor: Colors.white,
                 fontSize: 18,
-                fontWeight: FontWeight.w600,
+                fontWeight: FontWeight.w800,
               )
             ],
           ),
@@ -353,7 +355,7 @@ class HomePageView extends HomePageViewModel {
                   },
                   child: Container(
                     decoration: BoxDecoration(
-                      color: AppColors.secondaryColor.withAlpha(200),
+                      color: AppColors.subtitleColor.withValues(alpha: 0.7),
                       borderRadius: BorderRadius.circular(8),
                     ),
                     child: Padding(
