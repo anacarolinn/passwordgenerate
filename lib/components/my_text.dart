@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:password_generate/app/app_colors.dart';
 
 class MyText extends StatelessWidget {
   final String text;
@@ -10,7 +11,7 @@ class MyText extends StatelessWidget {
   const MyText({
     super.key,
     required this.text,
-    this.textColor = Colors.black,
+    this.textColor = AppColors.textColor,
     this.fontSize = 16,
     this.fontWeight = FontWeight.w500,
   });
@@ -19,7 +20,7 @@ class MyText extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       text,
-      style: GoogleFonts.robotoMono(
+      style: GoogleFonts.roboto(
         fontSize: fontSize,
         fontWeight: fontWeight,
         color: textColor,

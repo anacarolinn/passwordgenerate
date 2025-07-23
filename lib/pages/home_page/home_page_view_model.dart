@@ -8,7 +8,7 @@ abstract class HomePageViewModel extends State<HomePage> {
   bool upperLetters = true;
   bool lowerLetters = true;
   bool numbers = true;
-  bool symbols = true;
+  bool symbols = false;
   String password = '';
 
   @override
