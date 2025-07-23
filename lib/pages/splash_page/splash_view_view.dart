@@ -50,7 +50,7 @@ class SplashViewView extends SplashViewViewModel {
               ),
               SizedBox(height: 20),
               MyText(
-                text: 'Criador de senhas',
+                text: 'Gerador de senhas',
                 textColor: Colors.white,
                 fontSize: 22,
                 fontWeight: FontWeight.w700,

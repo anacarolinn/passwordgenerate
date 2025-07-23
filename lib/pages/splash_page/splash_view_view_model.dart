@@ -7,7 +7,7 @@ abstract class SplashViewViewModel extends State<SplashView> {
     super.initState();
     Future.delayed(const Duration(seconds: 2)).then(
       (value) {
-        Navigator.pushReplacementNamed(context, '/home');
+        Navigator.pushNamed(context, '/home');
       },
     );
   }
