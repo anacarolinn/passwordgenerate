@@ -3,8 +3,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import './home_page.dart';
 
-abstract class HomePageViewModel extends State<HomePage>
-    with SingleTickerProviderStateMixin {
+abstract class HomePageViewModel extends State<HomePage> {
   double sliderValue = 8;
   bool upperLetters = true;
   bool lowerLetters = true;
@@ -27,6 +26,7 @@ abstract class HomePageViewModel extends State<HomePage>
   onTapGenerate() {
     setState(() {
       turns += 1;
+
       password = generatePassword(
         lenght: sliderValue,
         incluedUpperLetters: upperLetters,

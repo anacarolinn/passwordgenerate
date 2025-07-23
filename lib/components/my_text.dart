@@ -7,6 +7,7 @@ class MyText extends StatelessWidget {
   final Color? textColor;
   final double? fontSize;
   final FontWeight? fontWeight;
+  final TextAlign? textAlign;
 
   const MyText({
     super.key,
@@ -14,6 +15,7 @@ class MyText extends StatelessWidget {
     this.textColor = AppColors.textColor,
     this.fontSize = 16,
     this.fontWeight = FontWeight.w500,
+    this.textAlign,
   });
 
   @override
@@ -25,6 +27,7 @@ class MyText extends StatelessWidget {
         fontWeight: fontWeight,
         color: textColor,
       ),
+      textAlign: textAlign,
     );
   }
 }
