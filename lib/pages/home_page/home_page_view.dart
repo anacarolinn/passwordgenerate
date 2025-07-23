@@ -291,9 +291,13 @@ class HomePageView extends HomePageViewModel {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Icon(
-                LucideIcons.refreshCcw,
-                color: Colors.white,
+              AnimatedRotation(
+                turns: turns,
+                duration: Duration(milliseconds: 500),
+                child: Icon(
+                  LucideIcons.refreshCcw,
+                  color: Colors.white,
+                ),
               ),
               SizedBox(
                 width: 6,

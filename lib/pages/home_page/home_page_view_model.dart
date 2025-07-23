@@ -3,13 +3,16 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import './home_page.dart';
 
-abstract class HomePageViewModel extends State<HomePage> {
+abstract class HomePageViewModel extends State<HomePage>
+    with SingleTickerProviderStateMixin {
   double sliderValue = 8;
   bool upperLetters = true;
   bool lowerLetters = true;
   bool numbers = true;
   bool symbols = false;
   String password = '';
+
+  double turns = 0.0;
 
   @override
   void initState() {
@@ -21,13 +24,9 @@ abstract class HomePageViewModel extends State<HomePage> {
     symbols;
   }
 
-  @override
-  void dispose() {
-    super.dispose();
-  }
-
   onTapGenerate() {
     setState(() {
+      turns += 1;
       password = generatePassword(
         lenght: sliderValue,
         incluedUpperLetters: upperLetters,
